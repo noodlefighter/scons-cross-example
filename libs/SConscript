@@ -1,0 +1,13 @@
+
+Import('env')
+
+subdirs_list = [
+	'test-lib',
+]
+
+objs = []
+for subdir in subdirs_list:
+	o = SConscript('%s/SConscript' % subdir)
+	objs.append(o)
+
+Return('objs')

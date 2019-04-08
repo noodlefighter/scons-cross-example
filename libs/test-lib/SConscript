@@ -1,0 +1,11 @@
+
+Import('env')
+
+# header files search path
+cur_path = Dir('.').abspath
+print("cur_path =", cur_path)
+env.Append(CPPPATH = [cur_path + "/inc"])
+
+srcs = [Glob('*.c') + Glob('*/*.c')]
+obj = env.Object(srcs)
+Return('obj')

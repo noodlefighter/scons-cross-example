@@ -1,0 +1,10 @@
+
+Import('env')
+
+#srcs = ['main.c']
+srcs = [Glob('*.c') + Glob('*/*.c')]
+obj = env.Object(srcs)
+
+Repository("./usbhid")
+
+Return('obj')
