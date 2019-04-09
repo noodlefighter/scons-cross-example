@@ -6,6 +6,7 @@ env_option = {
     "CXX"   : tchian + 'g++',
     "LD"    : tchian + 'g++',
     "AR"    : tchian + 'ar',
+	"AS"    : tchian + 'as',
     "STRIP" : tchian + 'strip',
 }
 

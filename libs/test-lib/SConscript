@@ -1,10 +1,12 @@
 
 Import('env')
+from utils.helper import *
 
 # header files search path
-cur_path = Dir('.').abspath
-print("cur_path =", cur_path)
-env.Append(CPPPATH = [cur_path + "/inc"])
+cur_path = get_cur_path(env)
+header_file_search_paths(env, [
+	cur_path + "/inc",
+])
 
 srcs = [Glob('*.c') + Glob('*/*.c')]
 obj = env.Object(srcs)
